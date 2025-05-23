@@ -1,24 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
 
-
 /*GLOBAL*/
 body {
     padding-top: 5rem;
-
+    background-color: #f0f0f0;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Playfair Display', serif;
 }
-
-
 main {
     padding: 20px;
+
 }
 main.container-fluid {
     width: 50%;
-}
 
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    grid-gap: 5px;
+}
+.box {
+
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    }
+.box1{
+
+      background-color: #AE335A; 
+      grid-column:1 / 6;
+      grid-row: 1 /4; 
+    }
+.box2{
+      background-color: #F94A1B; 
+      grid-column:1/3;
+      grid-row: 4/7;
+      
+    }
+
+.box3{
+
+        background-color: #FC9907; 
+        grid-column:3/6;
+        grid-row: 4
+        
+    }
+    .box4{
+
+        background-color: #A2AB25; 
+        grid-column:3/6;
+        grid-row: 5  ; 
+    }
+    .box5{
+
+        background-color: #2C767A; 
+        grid-column:3/6;
+         grid-row:6 ;
+    }
+    .box6{
+
+        background-color:#3B4D9A; 
+        grid-column:1/6;
+        grid-row: 7/8; 
+    }
+  
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
