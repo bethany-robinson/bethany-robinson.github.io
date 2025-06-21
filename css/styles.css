@@ -2,21 +2,95 @@
 
 /*GLOBAL*/
 body {
-    padding-top: 5rem;
-    background-color: #f0f0f0;
+  font-family: "Outfit", serif;
+  font-weight: 200;
+  font-style: normal;
+  margin-top: 80px;
+  max-width: 100%;
+  background-color: rgb(184 158 153);
+  justify-content: center;
+}
+/* Navigation custom styling */
+/* changes background color of the navbar */
+.bg-custom{
+  background-color: rgb(85, 70, 72);
+}
+.navbar-brand img{
+  margin-left: 5px;
+}
+.nav-link{
+  font-family: "Italiana", serif;
+  font-size: large;
+}
+/* End navigation custom styling */
+
+.text-light p{
+ color:antiquewhite;
+ font-family: "Italiana", serif;
+ font-weight:100;
+ font-size: 10pt;
+ padding-top: 3px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Playfair Display', serif;
-}
-main {
-    padding: 20px;
+.hero{
+  /* top | right | bottom | left */
+  padding: 3rem 1.5rem 3rem 1.5rem;
+  width: 100%;
+  text-align: center;
 
 }
-main.container-fluid {
-    width: 50%;
+.hero h1{
+  font-size: 40pt ;
+}
+/* homepage image styling responsive */
+.col img{
+  width:400px;
+}
+@media screen and (max-width: 1000px){
+  .col img{
+    width:300px;
+  }
+}
+@media screen and (max-width: 600px){
+  .col img{
+    width:200px;
+  }
+}
+
+header {
+  height: 150px;
+}
+
+h1{
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  font-style: normal;
 
 }
+h2{
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+h3{
+  font-family: "Italiana", serif;
+  font-size: x-large;
+  font-style: normal;
+}
+h4{
+  font-family: "Outfit", serif;
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container{
+  display: grid; 
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+}
+
 .wrapper{
     display: grid;
     grid-template-columns: repeat (6, 1fr);
@@ -92,4 +166,109 @@ margin-right: 10px;
 
 img.dibley {
     max-width: 100%
+}
+
+
+/* The styling below handles styling for the Skills page with 2 different breakpoints */
+/* displays as a grid with 3 columns if the screensize is over 1000px */
+.skills{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+/* handles styling for the skills card */
+article.skills_card{
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(176 171 171);
+  border: 1px solid rgb(187 188 184);
+  border-radius: 2%;
+  color:rgb(45, 43, 43);
+}
+/* ensures the image takes up the space alloted based on the columns */
+article.skills_card img{
+  max-width: 100%;
+}
+/* When the screen size is below 1000px, the layout switches to 2 columns */
+@media screen and (max-width: 1000px) {
+  .skills{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    }
+    /* heading size decreases for smaller screen */
+    h3 {
+      font-size: 1em;
+    }
+    /* font size for paragraph decreases for smaller screen */
+    p{
+      font-size: 10pt;
+    }
+
+    article.skills_card{
+      padding: 10px;
+      margin: 10px;
+      background-color: rgb(118 111 123);
+      border: 1px solid rgb(187 188 184);
+      border-radius: 2%;
+      color:rgb(45, 43, 43);
+    }
+    article.skills_card img{
+      max-width: 100%;
+    }
+}
+/* Styles Knitting page with cards */
+
+    .knitting{
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+        row-gap: 5px;
+
+    }
+    .card{
+        background-color: rgb(184 158 153);
+        margin: 15px;
+        width: 15rem;
+
+
+    }
+
+@media screen and (max-width: 1000px) {
+    
+    .knitting{
+        display: grid;
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-rows: repeat (2, 1fr);
+        grid-gap: 5px;
+        row-gap: 5px;
+
+    }
+    .card{
+        background-color: rgb(184 158 153);
+        margin: 15px;
+        width: 10rem;
+
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .knitting{
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: repeat (3, 1fr);
+        grid-gap: 5px;
+        row-gap: 5px;
+
+    }
+    .card{
+        background-color: rgb(184 158 153);
+        margin: 15px;
+        width: 100%;
+
+
+    }
+
 }
